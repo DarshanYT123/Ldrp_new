@@ -1,0 +1,55 @@
+
+  
+  .steps-container {
+    position: relative;
+    /* padding: 0px 30px; */
+  }
+  
+  .progress-line {
+    position: relative;
+    height: 2px;
+    background: #47A5E4;
+    width: 0;
+    top: -96px;
+    left: 0px;
+    /* z-index: -1; */
+    transition: all 0.25s ease;
+  }
+  
+  .steps-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .steps {
+    /* position: relative; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .steps.active {
+    background-color: #47A5E4;
+    color: #47A5E4;
+    position: relative;
+    /* color: skyblue; */
+
+  }
+  .step-item.active{
+    color: #47A5E4;
+
+  }
+  .step-item{
+    /* width: 200px; */
+    /* position: relative; */
+    /* white-space: wrap; */
+  }

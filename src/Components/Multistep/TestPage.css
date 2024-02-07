@@ -1,0 +1,92 @@
+/* .customline{
+    :where(.css-dev-only-do-not-override-gzal6t).ant-steps .ant-steps-vertical .ant-steps-item .ant-steps-item-container .ant-steps-item-tail {
+        position: absolute;
+        top: 0;
+        inset-inline-start: 15px;
+        width: 1px;
+        height: 160%;
+        padding: 38px 0 6px;
+    }
+    }
+    const [basicinfoDetails,setBasicinfoDetails] = useState(null)
+    const [loginDetails,setLoginDetails] = useState(null)
+    const [studentDetails,setStudentDetails] = useState(null)
+    const [examDetails,setExamDetails] = useState(null)
+    const [midexamDetails,setMidExamDetails] = useState(null)
+    const [activityDetails,setActivityDetails] = useState(null)
+    const [seminarDetails,setSeminarDetails] = useState(null)
+    const [membershipDetails,setMembershipDetails] = useState(null)
+    const onFinishBasicinfoForm = (values) => {
+      setBasicinfoDetails(values);
+      setCurrent(1)
+    }
+    const onFinishStudentForm = (values) => {
+      setStudentDetails(values);
+      setCurrent(2)
+    }
+    const onFinishExamForm = (values) => {
+      setExamDetails(values);
+      setCurrent(3)
+    }
+    const onFinishMidExamForm = (values) => {
+      setMidExamDetails(values);
+      setCurrent(4)
+    }
+    const onFinishActivitiesForm = (values) => {
+      setActivityDetails(values);
+      setCurrent(5)
+    }
+    const onFinishSeminarForm = (values) => {
+      setSeminarDetails(values);
+      setCurrent(6)
+    }
+    const onFinishMembershipForm = (values) => {
+      setMembershipDetails(values);
+      setCurrent(7)
+    }
+    const forms = [
+      <BasicInformation onFinish={onFinishBasicinfoForm} />,
+      <StudentHistory onFinish={onFinishStudentForm} />,
+      <ExamSheetnew onFinish={onFinishExamForm} />,
+      <MidSemesternew onFinish={onFinishMidExamForm} />,
+      <Activitiesnew onFinish={onFinishActivitiesForm} />,
+      <Seminarnew onFinish={onFinishSeminarForm} />,
+      <Membershipnew onFinish={onFinishMembershipForm} />,
+  
+    ]
+  
+    return(
+      <div className='flex flex-row'>
+    <Steps style={{padding:"32px 16px"}} direction='vertical' onChange={setCurrent} current={current}  >
+      <Steps.Step style={{width:"100px",height:"100px"}} className={styles.customline} title="Login"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Title"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Set"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Set"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Set"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Set"></Steps.Step>
+      <Steps.Step style={{width:"100px",height:"100px"}} title="Set"></Steps.Step>
+      {forms[current]}
+    </Steps>
+    </div>
+    )
+  
+  }
+  
+  function BasicInformation({onFinishBasicinfoForm}){
+    return<Form onFinish={onFinishBasicinfoForm}><Form.Item><Basicinfo/></Form.Item></Form>
+  }
+  function StudentHistory({onFinishStudentForm}){
+    return<Form onFinish={onFinishStudentForm}><Form.Item><StudentHistorynew/></Form.Item></Form>
+  }
+  function ExamSheet({onFinishExamForm}){
+    return<Form onFinish={onFinishExamForm}><Form.Item><ExamSheetnew/></Form.Item></Form>
+  }function MidSemester({onFinishMidForm}){
+    return<Form onFinish={onFinishMidForm}><Form.Item><MidSemesternew/></Form.Item></Form>
+  }function Activities({onFinishActivityForm}){
+    return<Form onFinish={onFinishActivityForm}><Form.Item><Activitiesnew/></Form.Item></Form>
+  }function Seminar({onFinishSeminarForm}){
+    return<Form onFinish={onFinishSeminarForm}><Form.Item><Seminarnew/></Form.Item></Form>
+  }
+  function Membership({onFinishMembershipForm}){
+    return<Form onFinish={onFinishMembershipForm}><Form.Item><Membershipnew/></Form.Item></Form>
+  } */

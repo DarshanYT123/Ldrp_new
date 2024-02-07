@@ -1,0 +1,484 @@
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-a");
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sidebar{
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar.fixed {
+  position: fixed;
+  top:6%;
+
+}
+
+.truncate {
+  width: 123px;
+}
+
+/* cheakbox css */
+
+/* end cheakbox css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F6F3F3;
+}
+
+input[type="number"]::-webkit-inner-spin-button{
+  display: none;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.steps-container {
+  position: relative;
+}
+
+.progress-line {
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background: gray;
+  top: 50px;
+  left: 20px;
+
+  transition: all 0.25s ease;
+}
+
+.steps-wrapper {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: start;
+}
+
+.steps {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.steps.active {
+  background-color: skyblue;
+} */
+
+
+
+
+
+
+
+
+.skill{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    text-align: center;
+}
+.outer{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 30px;
+}
+
+.inner{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim1 2s linear forwards;
+}
+.svgeffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim1{
+    100%{
+        stroke-dashoffset:160;
+    }
+}
+@keyframes anim2{
+    100%{
+        stroke-dashoffset:100;
+    }
+}
+@keyframes anim3{
+    100%{
+        stroke-dashoffset:236;
+    }
+}
+
+
+
+
+
+
+
+
+*::-webkit-scrollbar {
+  width: 7px;
+  /* padding:2px 2px; */
+}
+*::-webkit-scrollbar-track {
+  background: #F9F7F7;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border-radius: 10px;
+  border: 3px solid #D9D9D9;
+}
+
+
+
+.table-auto tbody tr:nth-of-type(odd) {
+  /* background-color:#E7E7E7; */
+}
+.table-auto tbody tr:nth-of-type(even) {
+  background-color:#FFF;
+}
+.table-auto1 tbody tr:nth-of-type(odd) {
+  background-color:#F5F5F5;
+}
+.table-auto1 tbody tr:nth-of-type(even) {
+  background-color:#FFF;
+}
+
+
+.circle {
+  width: 29px;
+  height: 29px;
+  line-height: 25px;
+  background-color: #D9D9D9;
+  color: #D9D9D9;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.stepWrapper {
+  display: flex;
+  flex-direction:column;
+}
+
+.stepBlock .circleWrapper {
+  padding: 0px 20px;
+}
+
+.selected .circle {
+  color: black;
+  background-color: #47A5E4;
+}
+
+.stepBlock:not(:last-child)  .circleWrapper::after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  bottom:0px;
+  margin:auto;
+  background-color:#47A5E4;
+}
+
+.circleWrapper {
+  content: '';
+  width: 47%;
+  height: 2px;
+  position: absolute;
+  top:300px;
+  left:-10px;
+  bottom:0px;
+  margin:auto;
+  background-color:#D9D9D9;
+  transform: rotate(90deg);
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after {
+  height: 3px;
+}
+
+.stepBlock:not(:last-child).selected > .circleWrapper::after, .stepBlock:not(:last-child).selected ~ .stepBlock:not(:last-child) > .circleWrapper::after {
+  height: 2px;
+  opacity: 0.6;
+}
+
+.primaryButton {
+  padding: 10px 25px;
+  background-color: green;
+  border: none;
+  margin: 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+}
+
+
+/* .radio{
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.radio__input{
+  display: none
+}
+.radio__radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #D1D1D6;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 1.5px;
+}
+.radio__radio::after{
+  content: '';
+  width: 100%;
+  border: 2px solid #12B38C;
+  height: 100%;
+  display: block;
+  background: #12B38C;
+  border-radius: 100%;
+  transform: scale(0);
+  transition: transform 0.15s;
+}
+
+.radio__input:checked + .radio__radio::after {
+  border: 2px solid #12B38C;
+    transform: scale(1);
+} */
+.form-box{
+	/* max-width: 400px; */
+	background-color: #fff;
+	/* margin:150px auto; */
+	/* padding:40px; */
+	border-radius: 8px;
+}
+
+.form-box label input{
+	display: none;
+}
+.form-box label {
+	display: flex;
+	cursor: pointer;
+	/* margin-bottom: 30px; */
+	padding-left:35px;
+	position: relative;
+}
+.form-box label .circle{
+	height: 18px;
+	width: 18px;
+	border:2px solid #D1D1D6;
+  background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left:0;
+	/* top:-2px; */
+	transition: border-color .5s ease;
+}
+.form-box label .circle::before{
+	content: '';
+	height: 11px;
+	width: 11px;
+	background-color: #12B38C;
+	position: absolute;
+	left:-5.7px;
+	top:-5.3px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-left:7px;
+	margin-top:7px;
+	transition: transform .5s ease;
+	transform: scale(0);
+}
+.form-box label span{
+	font-size: 16px;
+	color:#000;
+	display: inline-block;
+	/* text-transform: uppercase; */
+	transition:color .5s ease;
+}
+.form-box label input:checked + .circle{
+	border-color:#12B38C;
+}
+.form-box label input:checked + .circle::before{
+	transform: scale(1);
+}
+.form-box label input:checked + .circle {
+	color:#12B38C;
+}
+
+
+
+
+.form-box1{
+	/* max-width: 400px; */
+	background-color: #fff;
+	/* margin:150px auto; */
+	/* padding:40px; */
+	border-radius: 8px;
+}
+.form-box1 label input{
+	display: none;
+}
+.form-box1 label {
+	display: flex;
+	cursor: pointer;
+	/* margin-bottom: 30px; */
+	padding-left:35px;
+	position: relative;
+}
+.form-box1 label .circle{
+	height: 18px;
+	width: 18px;
+	border:2px solid #D1D1D6;
+  background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left:0;
+	/* top:-2px; */
+	transition: border-color .5s ease;
+}
+.form-box1 label .circle::before{
+	content: '';
+	height: 11px;
+	width: 11px;
+	background-color: #12B38C;
+	position: absolute;
+	left:-5.7px;
+	top:-5.3px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-left:7px;
+	margin-top:7px;
+	transition: transform .5s ease;
+	transform: scale(0);
+}
+.form-box1 label input:checked + .circle{
+	border-color:#12B38C;
+}
+.form-box1 label input:checked + .circle::before{
+	transform: scale(1);
+}
+.form-box1 label input:checked + .circle {
+	color:#12B38C;
+}
+
+
+.form-box2{
+	/* max-width: 400px; */
+	background-color: #fff;
+	/* margin:150px auto; */
+	/* padding:40px; */
+	border-radius: 8px;
+}
+.form-box2 label input{
+	display: none;
+}
+.form-box2 label {
+	display: flex;
+	cursor: pointer;
+	/* margin-bottom: 30px; */
+	padding-left:35px;
+	position: relative;
+}
+.form-box2 label .circle{
+	height: 18px;
+	width: 18px;
+	border:2px solid #D1D1D6;
+  background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left:0;
+	/* top:-2px; */
+	transition: border-color .5s ease;
+}
+.form-box2 label .circle::before{
+	content: '';
+	height: 11px;
+	width: 11px;
+	background-color: #12B38C;
+	position: absolute;
+	left:-5.4px;
+	top:-5.4px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	margin-left:7px;
+	margin-top:7px;
+	transition: transform .5s ease;
+	transform: scale(0);
+}
+.form-box2 label input:checked + .circle{
+	border-color:#12B38C;
+}
+.form-box2 label input:checked + .circle::before{
+	transform: scale(1);
+}
+.form-box2 label input:checked + .circle {
+	color:#12B38C;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* <div className='flex justify-start px-5'>
+<div className='flex flex-col justify-center items-center py-6'>
+      {
+        formArray.map((v, i) => <><div className={`w-[20px]  text-white rounded-full ${formNo - 1 === i || formNo - 1 === i + 1 || formNo === formArray.length ? 'bg-blue-500' : 'bg-slate-400'} h-[20px] flex  justify-center items-center`}>
+          {}
+        </div>
+          {
+            i !== formArray.length - 1 && <div className={`w-[2px]  h-[82px] ${formNo === i + 2 || formNo === formArray.length ? 'bg-blue-500' : 'bg-slate-400'}`}><span className='text-[color:var(--Desable-Grey,#BDBDBD)] text-[12px] font-Poppins not-italic font-medium leading-[normal]'>{v}</span></div>
+          }
+        </>)
+      }
+    </div>
+    </div> */
